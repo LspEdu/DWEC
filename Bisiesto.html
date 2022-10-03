@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        
+    </div>
+    <div id= "div">
+
+    </div>
+    <script>
+        var año = prompt("Año");
+   
+       // var dividendo1 = año % 4;
+        //var dividendo2 = año % 100;
+        //var dividendo3 = año % 400;
+
+       // var dividendo = dividendo1 + dividendo3;
+
+        //diviendo ? cien != año % 100 : respuesta = "No es bisiesto";
+
+      /*  año != 0 ? 
+                ((año % 4 == 0 )? ((año % 100 != 0) ? ((año % 400 === 0) ? respuesta = " es bisiesto" :  respuesta = " no es bisiesto 400") 
+                     : (respuesta = " no es bisiesto 100 ")) 
+                    :(respuesta = " no es bisiesto  ") ) 
+                : respuesta = " no válido" ; 
+*/
+        año != 0 ? (año % 4 == 0 ? (año % 400 == 0 ? (año % 100 != 0 ? respuesta = " es bisiesto" : respuesta = " no es bisiesto"):respuesta=" no es bisiesto"): respuesta =" no es bisiesto") : respuesta = " no valido";
+        document.getElementById("div").innerHTML+=respuesta;
+        document.getElementById("div").innerHTML+="  "+año%400 + año%4 + año%100;
+    </script>
+
+</body>
+</html>
