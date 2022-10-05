@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Literales</title>
+</head>
+<body>
+    Introduce el número: <input type="number" name="num" id="num"><button onclick="literal()">Litera</button>
+    
+    <script>
+        function literal(){
+            var num = document.getElementById("num").value;
+            var lit = ['uno' , 'dos' , 'tres' , 'cuatro' , 'cinco'];
+            if (num < 1 || num > 5){
+                alert("Error: no puedes introducir números mayor a 5 o menores de 1");
+            }else {
+                for(var i = 1 ;;i++){
+                    console.log("su");
+                    if (i == num ){
+                        alert(lit[i-1]);
+                        break;
+                    }
+                }
+            }
+
+        }
+    </script>
+</body>
+</html>
