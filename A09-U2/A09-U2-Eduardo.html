@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caracteres</title>
+</head>
+<body>
+    Introduce valor : <input type="text" id="strin"><button onclick="leer()">Confirmar</button>
+
+    <script>
+        function leer(){
+            var strin = document.getElementById("strin").value;
+
+            for(var i = 0 ; i < strin.length  ; i++){  
+                console.log(typeof(strin[i]));
+               // if( typeof(strin[i]) != typeof(1) ) alert(strin[i]);
+                if ( strin[i] >= 0 ) continue;
+                else alert(strin[i]);
+            }
+        }
+    </script>
+</body>
+</html>

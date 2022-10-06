@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suma Cifras</title>
+</head>
+<body>
+    Introduce el número : <input type="number"  id="num"><button onclick="suma()">Sumar</button>
+    
+    <script>
+        function suma(){
+            var x = 0;
+            var num = document.getElementById("num").value;
+            
+            for (var i = 0 ; i < num.length ; i++){
+                
+                x += parseInt(num[i]);
+            }
+            alert(x);
+        }
+    </script>
+</body>
+</html>
