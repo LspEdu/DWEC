@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Palíndromo</title>
+</head>
+<body>
+    Introduce la cadena : <input type="text" id="cadena"> <button onclick="check_palindromo()">PALINDROMEA</button>
+    <script>
+        function check_palindromo(){
+            var cade = document.getElementById("cadena").value;
+            var cadena = cade.split('');
+            var alreve = cadena.reverse();
+            cade = document.getElementById("cadena").value;
+            cadena = cade.split('');    
+            var flag = 0;
+            var flag = 0;
+            for(var i = 0 ; i < cadena.length ;i++){
+                if(cadena[i] != alreve[i]) {
+                    flag = 1;
+                    break;
+                }
+            }
+            flag == 0 ? alert("Correcto, es palíndromo"): alert("No es palíndromo");
+        }
+    </script>
+</body>
+</html>

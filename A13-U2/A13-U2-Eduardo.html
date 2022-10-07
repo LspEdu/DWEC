@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+<body>
+    <p id="p">Introduzca su contraseña <input type="password" id="pswd"><button onclick="login()">LogIn</button></p>
+
+    <script>
+        function login(){
+            var pswd = "DWEC";
+            var csk = document.getElementById("pswd").value;
+
+            if (pswd != csk ){
+                alert("Error: Clave incorrecta");
+                document.getElementById("pswd").value="";
+            }else document.getElementById("p").innerHTML =" Sesión iniciada. Bienvenid@.";
+        }
+    </script>
+</body>
+</html>
