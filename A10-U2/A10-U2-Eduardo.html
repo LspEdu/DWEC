@@ -7,7 +7,9 @@
     <title>Suma Cifras</title>
 </head>
 <body>
-    Introduce el número : <input type="number"  id="num"><button onclick="suma()">Sumar</button>
+    Introduce el número : <input type="text"  id="num">
+    <button onclick="suma()">Sumar Todo</button>
+    <button onclick="sumaEntero()">Sumar Enteros</button>
     
     <script>
         function suma(){
@@ -15,7 +17,14 @@
             var num = document.getElementById("num").value;
             
             for (var i = 0 ; i < num.length ; i++){
-                
+                if (num[i] >= 0) x += parseFloat(num[i]);
+            }
+            alert(x);
+        }
+        function sumaEntero(){
+            var x = 0;
+            var num = document.getElementById("num").value;
+            for(var i = 0 ; i < num.length && num[i] != '.' ; i++){
                 x += parseInt(num[i]);
             }
             alert(x);
