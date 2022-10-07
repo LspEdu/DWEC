@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <script type="text/javascript" src="A011-U2-Eduardo.js"></script>
+    <link rel="stylesheet" href="A011-U2-Eduardo.css">
+   
+</head>
+<body>
+        <div>
+            <table id="tabla">
+                <tr>
+                    <td colspan="6">
+                        <input type="text" name="oper" id="oper"> 
+                 
+                        <button id="cal" onclick="calcular()">Calcular</button>
+                    </td>
+                </tr>
+                <tr>   
+                    <td colspan="6"><input type="number" name="resul" id="resul" disabled></td>
+                </tr>
+                <tr>
+                    <td>
+                        <button id="1" onclick="escribir(1)">1</button>
+                    </td>
+                    <td>
+                        <button id="2" onclick="escribir(2)">2</button>
+                    </td>
+                    <td>
+                        <button id="3" onclick="escribir(3)">3</button>
+                    </td>
+                    <td>
+                        <button  name="op" id="+" onclick="escribir('+')">+</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <button id="4" onclick="escribir(4)">4</button>
+                    </td>
+                    <td>
+                        <button id="5" onclick="escribir(5)">5</button>
+                    </td>
+                    <td>
+                        <button id="6" onclick="escribir(6)">6</button>
+                    </td>
+                    <td>
+                        <button name="op"  id="-" onclick="escribir('-')">-</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <button id="7" onclick="escribir(7)">7</button>
+                    </td>
+                    <td>
+                        <button id="8" onclick="escribir(8)">8</button>
+                    </td>
+                    <td>
+                        <button id="9" onclick="escribir(9)">9</button>
+                    </td>
+                    <td>
+                        <button name="op"  id="*" onclick="escribir('*')">*</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <button id="borrar" onclick="borrar()">C</button>
+                    </td>
+                    <td>
+                        <button id="0" onclick="escribir(0)">0</button>
+                    </td>
+                    <td>
+                        <button id="borrar" onclick="borrar_uno()">Borrar</button>
+                    </td>                   
+                    <td>
+                        <button name="op"  id="/" onclick="escribir('/')">/</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <button id='(' onclick="escribir('(')">(</button>
+                    </td>
+                    <td>
+                        <button disabled = true></button>
+                    </td>
+                    <td>
+                        <button id=")" onclick="escribir(')')">)</button>
+                    </td>
+                    <td>
+                        <button id="salir" onclick="salir()">Salir</button>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+
+</body>
+</html>
