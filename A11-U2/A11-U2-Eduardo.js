@@ -11,7 +11,7 @@ function borrar_uno(){
     document.getElementById("oper").value = p;
 }
 function salir(){
-    var exit = confirm("¿Quieres salir?")? window.close() : borrar();  
+    var exit = confirm("¿Quieres salir?") ? document.getElementById("tabla").innerHTML="": borrar();  
 }
 function calcular(){
     var calculo = document.getElementById("oper").value;
