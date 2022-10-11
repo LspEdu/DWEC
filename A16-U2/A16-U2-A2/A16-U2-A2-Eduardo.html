@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grupos</title>
+</head>
+<body>
+    Introduce el número de músicos: <input type="number" name="mus" id="mus"><input type="button" value="Enviar" onclick="musicos()">
+
+    <script>
+        function musicos(){
+            let musc = document.getElementById("mus").value;
+
+            if (musc <= 0) alert("Not a group");
+            if (musc == 1) alert("Solo");
+            if (musc == 2) alert("Duet");
+            if (musc == 3) alert("Trio");
+            if (musc == 4) alert("Quartet");
+            if (musc > 4) alert ("This is a large group");
+        }
+    </script>
+</body>
+</html>

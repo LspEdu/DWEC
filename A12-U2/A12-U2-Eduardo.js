@@ -16,10 +16,30 @@ function texto(){
     }
 };
 function bool(){
-
+    var bol = [];
+    for(var i = 0 ; i < valores.length; i++ ){
+        if(typeof(valores[i]) === 'boolean'){
+            bol.push(valores[i]); 
+        }
+    }
+    if(bol[0] == bol[1]){
+        if(bol[0] == true){
+            document.getElementById("ans").innerHTML="Los dos boolean son true";
+        }else {
+            document.getElementById("ans").innerHTML="Los dos boolean son false";
+        }
+    }else{
+        document.getElementById("ans").innerHTML="Los dos boolean son distintos";
+    }
 };
 function num(){
-    
+    var num = [];
+    for(var i = 0 ; i < valores.length; i++ ){
+        if(typeof(valores[i]) === 'number'){
+            num.push(valores[i]); 
+        }
+    }
+    document.getElementById("ans").innerHTML=`La suma de ${num[0]} + ${num[1]} es `+ (num[0] + num[1]);
 };
 
 

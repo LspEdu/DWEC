@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cluedon't</title>
+    <script src="A16-U2-A3-Eduardo.js"></script>
+</head>
+<body>
+    <div>
+        Uno de los asistentes a una fiesta ha matado al Maestro,<br>
+        adivina quién fue eligiendo las opciones correctas.
+    </div>
+    <br>
+    <div id="values">
+        <label for="room">Habitación del asesinato: </label>
+        <select name="room" id="room">
+            <option value="1">Salón de baile</option>
+            <option value="2">Galería</option>
+            <option value="3">Sala del Billar</option>
+            <option value="4">Comedor</option>
+        </select><br>
+        <label for="murder">Asesino</label>
+        <select name="murder" id="murder">
+            <option value="4">Sr. Parkes</option>
+            <option value="2">Sra. Van Cleve</option>
+            <option value="1">Sra. Sparr</option>
+            <option value="3">Sr. Kalehoff</option>
+        </select><br>
+        <input type="button" value="Investigar" onclick="investigar()">
+    </div>
+
+</body>
+</html>

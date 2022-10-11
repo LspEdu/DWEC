@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+</head>
+
+<body>
+    <div style="border:10px; border-style:ridge">
+        Introduce el dato
+        <br>
+        <input type="text" id="res">
+        <ul>Introduce el tipo del dato que has introducido:
+            <li>
+                <input type="radio" name="rad" id="string" value="string">String
+            </li>
+            <li>
+                <input type="radio" name="rad" id="number" value="number">Number
+            </li>
+            <li>
+                <input type="radio" name="rad" id="boolean" value="boolean">Boolean
+            </li>
+            <li>
+                <input type="radio" name="rad" id="null" checked="checked" value="null">Null
+            </li>
+        </ul>
+        <button onclick="transformar()">Transformar</button>
+    </div>
+    
+    <div id="ans" style="border:10px; border-style:ridge">
+
+    </div>
+
+    <script>
+        function transformar(){ //FALTA VALIDAR LA ENTRADA
+
+            var ans = document.getElementById("ans");
+            var x = document.getElementById("res").value;
+            var radio = document.getElementsByName("rad");
+            var flag = 0;
+            var rad;
+            for(var i = 0; i < radio.length && flag == 0;i++){
+                if(radio[i].checked) rad = radio[i].value;
+            };
+            switch(rad){
+                case "string":
+                    ans.innerHTML="Es tipo String, convirtámoslo a <br>";
+                    ans.innerHTML+=`Number: ${tnumber(x)} <br>`; 
+                    ans.innerHTML+=`Boolean: ${tbool(x)} <br>`;
+                    ans.innerHTML+=`Null: ${tnull(x)} <br>`; 
+                case "number":
+                    ans.innerHTML="Es tipo Number, convirtámoslo a <br>";
+                    ans.innerHTML+=`String: ${tstring(x)} <br>`; 
+                    ans.innerHTML+=`Boolean: ${tbool(x)} <br>`;
+                    ans.innerHTML+=`Null: ${tnull(x)} <br>`; 
+                case "boolean":
+                    ans.innerHTML="Es tipo Boolean, convirtámoslo a <br>";
+                    ans.innerHTML+=`String: ${tstring(x)} <br>`; 
+                    ans.innerHTML+=`Number: ${tnumber(x)} <br>`; 
+                    ans.innerHTML+=`Null: ${tnull(x)} <br>`; 
+
+                case "null":
+                    ans.innerHTML="Es tipo Null, convirtámoslo a <br>";
+                    ans.innerHTML+=`String: ${tstring(x)} <br>`; 
+                    ans.innerHTML+=`Number: ${tnumber(x)} <br>`; 
+                    ans.innerHTML+=`Boolean: ${tbool(x)} <br>`;
+            }
+
+        };
+        function tstring(x){
+            return ""+x+"";
+        };
+        function tnumber(x){
+            if(isNaN(parseFloat(x))) return `No es posible convertir ${x} a number`;
+            else return parseFloat(x);
+        };
+        function tbool(x){
+            return Boolean(x);
+        };
+        function tnull(x){
+            if(!x) return `${x} es null`;
+            else return `${x} no es null`;
+        };
+    </script>
+</body>
+
+</html>
