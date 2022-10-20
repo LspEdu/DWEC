@@ -1,19 +1,23 @@
-function edad() {
+function mostrar_edad(){
     let fecha = new Date(document.getElementById("nac").value);
-    const fechaActual = new Date();
-    var respuesta2 ="";
-    var respuesta3 ="";
-    let dias = fechaActual.getDay() - fecha.getDay();
-    if(dias < 0)var meses = fechaActual.getMonth() - fecha.getMonth() + 1;
-    else {
-        var meses = fechaActual.getMonth() - fecha.getMonth();
-        var respuesta2 = `${meses} meses,`;
-    }
-    if(meses < 0) var años = fechaActual.getFullYear() - fecha.getFullYear() + 1;
-    else {
-        var años = fechaActual.getFullYear() - fecha.getFullYear();
-        var respuesta3= `Tienes ${años} años, `
-    }
-  console.log(respuesta3 + respuesta2 + `${dias} días`);
+    alert(edad(fecha));
+};
 
+function edad(fecha) {
+    const fechaActual = new Date();
+    var respuesta = "";   
+    let dias = fechaActual.getDate() - fecha.getDate();
+    let meses = fechaActual.getMonth() - fecha.getMonth();
+    let años = fechaActual.getFullYear() - fecha.getFullYear()
+    if( fecha.getMonth() == fechaActual.getMonth() && fecha.getDate() == fechaActual.getDate()) respuesta = `Feliz cumpleaños, cumples ${años}`;
+    else{    
+        if(dias <= 0 &&  fecha.getMonth() != fechaActual.getMonth()) meses++;
+        if(meses <= 0) años++;
+        dias = Math.abs(dias);
+        meses = Math.abs(meses);
+        respuesta = `Tienes ${años} años`;
+        if(meses != 0) respuesta += `, ${meses} meses`;
+        if(dias != 0) respuesta += `, ${dias} días`;
+   }
+   return respuesta;
 }
