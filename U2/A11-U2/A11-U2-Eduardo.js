@@ -5,16 +5,12 @@ function borrar(){
     document.getElementById("oper").value="";
 }
 function borrar_uno(){
-    var p = document.getElementById("oper").value;
-    p = p.slice(0,-1);
-    document.getElementById("oper").value = p;
+    document.getElementById("oper").value=document.getElementById("oper").value.slice(0,-1);
 }
 function salir(){
     confirm("¿Quieres salir?") ? document.getElementById("tabla").innerHTML="": borrar();  
 }
 function calcular(){
-    var calculo = document.getElementById("oper").value;
-    var res = eval(calculo);
-    document.getElementById("resul").value = res;
-    document.getElementById("oper").value="";
+    document.getElementById("resul").value = eval(document.getElementById("oper").value);
+    borrar();
 }
