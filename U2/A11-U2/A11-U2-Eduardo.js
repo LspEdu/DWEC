@@ -7,11 +7,10 @@ function borrar(){
 function borrar_uno(){
     var p = document.getElementById("oper").value;
     p = p.slice(0,-1);
-
     document.getElementById("oper").value = p;
 }
 function salir(){
-    var exit = confirm("¿Quieres salir?") ? document.getElementById("tabla").innerHTML="": borrar();  
+    confirm("¿Quieres salir?") ? document.getElementById("tabla").innerHTML="": borrar();  
 }
 function calcular(){
     var calculo = document.getElementById("oper").value;
