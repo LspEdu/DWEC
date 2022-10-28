@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./A6-U3-Eduardo.js"></script> 
+    <style>
+        fieldset{
+            text-align: center;
+            border-style: none;
+        }
+        fieldset select {
+            border-radius: 25px;
+            border: 3px solid #8a2be2;
+            width: 80%;
+            height: 100px;
+            font-size: large;
+        }
+        fieldset button {
+            transition-duration: 0.2s;
+            border-radius: 60px;
+            border-style: none;
+            background-color: #8a2be2;
+            color:#FFF;
+            font-size: 22px;
+            width: 200px;
+            height: 40px;
+        }
+        fieldset button:hover{
+            background-color: #FFF;
+            color:#8a2be2;
+            border-color: #8a2be2;
+            border-style: solid;
+        }
+        #hora{
+            color: #8a2be2;
+        }
+        
+    </style>
+
+</head>
+<body>
+    
+        <fieldset>
+            <select name="UTC" id="UTC">
+                <option value="-12"> UTC -12 : Línea internacional de fecha del oeste</option>
+                <option value="-11"> UTC -11 : Isla Midway, Samoa</option>
+                <option value="-10"> UTC -10 : Hawai</option>
+                <option value="-9"> UTC -9 : Alaska</option>
+                <option value="-8"> UTC -8 : Hora del pacífico (USA y Canadá)</option>
+                <option value="-7"> UTC -7 : Hora de las montañas rocosas (USA y Canadá)</option>
+                <option value="-6"> UTC -6 : América central</option>
+                <option value="-5"> UTC -5 : Hora central (USA y Canadá)</option>
+                <option value="-4"> UTC -4 : Hora del Atlántico (Canadá)</option>
+                <option value="-3"> UTC -3 : Buenos Aires, Asunción, Brasilia, Montevideo</option>
+                <option value="-2"> UTC -2 : Atlántico central</option>
+                <option value="-1"> UTC -1 : Azores</option>
+                <option value="+0"> UTC 0 : Hora del meridiano de Greenwich, Londres, Dublín</option>
+                <option value="+1" selected="selected"> UTC +1 : París, Madrid, Barcelona, Roma</option>
+                <option value="+2"> UTC +2 : El Cairo</option>
+                <option value="+3"> UTC +3 : Nairobi</option>
+                <option value="+4"> UTC +4 : Bakú</option>
+                <option value="+5"> UTC +5 : Ekaterimburgo</option>
+                <option value="+6"> UTC +6 : Astana</option>
+                <option value="+7"> UTC +7 : Bangkok</option>
+                <option value="+8"> UTC +8 : Ulán Bator</option>
+                <option value="+9"> UTC +9 : Tokio</option>
+                <option value="+10"> UTC +10 : Sidney</option>
+                <option value="+11"> UTC +11 : Islas Salomón</option>
+                <option value="+12"> UTC +12 : Wellington</option>  
+            </select>
+            <br><br>
+            <button onclick="setInterval(function(){
+                                                    crono(document.getElementById('UTC').value);
+                                                    document.getElementById('dil').hidden=false;
+                                                    },1000)"> ¿Qué hora es?</button>
+        </fieldset>
+        <fieldset id="dil" hidden="true"><h1 id="hora"></h1></fieldset>
+    
+</body>
+</html>

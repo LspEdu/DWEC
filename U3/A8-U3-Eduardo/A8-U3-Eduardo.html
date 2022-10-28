@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./A8-U3-Eduardo.js"></script>
+    <style>
+        div{
+            text-align: center;
+            margin: auto;
+            width: 50%;
+            padding: 10px;
+        }
+        div fieldset{
+            height: 100px;
+            border:solid
+        }
+        #cir{
+            border: solid; 
+            border-radius: 100px;
+        }
+        
+        div fieldset fieldset{
+            border-style: none;
+            padding: 12px;
+            height: 65%;
+            border-radius:30px;
+        }
+        #divi{
+            border-radius:20px;
+            width:fit-content;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <fieldset id="cir">
+            <legend>
+                Introduce el radio del circulo : 
+            </legend>
+            <input type="number" name="radio" id="radio" min="0"> 
+            <br><br><button onclick="circulo()">Calcular</button>
+        </fieldset>
+        <br>
+        <fieldset>
+            <legend>
+                Introduce la medida de la base y de la altura:
+            </legend>
+            
+            <fieldset>
+                Base: <input type="number" name="base" id="base" min="0" > Altura: <input type="number" name="altura" id="altura" min="0"> 
+                <br>
+                <br><button onclick="triangulo()">Calcular</button>
+            </fieldset>
+        </fieldset>
+    </div>
+    <div id="divi">
+        
+    </div>
+</body>
+</html>
