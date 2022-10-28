@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <fieldset>
+            <legend>
+                Introduce una cadena
+            </legend>
+            <input type="text" name="text" id="text">
+            <br><br>
+            <button onclick="mayus()">Enviar</button>
+        </fieldset>
+    </div>
+    <br>
+    <div id="divi">
+
+    </div>
+    <script>
+        function mayus(){
+            let texto = document.getElementById("text").value;
+            let x;
+            texto == texto.toUpperCase() 
+            ? x = "Todas son mayúsculas"  
+            :texto == texto.toLowerCase()
+                ? x = "Todas son minúsculas"
+                : x = "Hay mayúsculas y minúsculas";
+            return document.getElementById("divi").innerHTML=x;
+        }
+        
+    </script>
+</body>
+</html>
