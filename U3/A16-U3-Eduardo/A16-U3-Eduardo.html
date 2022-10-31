@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FINDE</title>
+</head>
+<body>
+    <fieldset>
+        <legend>
+            Introduce el día de la semana y el día del mes: 
+        </legend>
+        <input type="text" name="texto" id="texto"><button onclick="semana()">Enviar</button>
+    </fieldset>
+
+    <script>
+        function semana(){
+            let texto = (document.getElementById("texto").value).toLowerCase();
+            let dia = /^\b(lunes|martes|miércoles|jueves|viernes|sabado|domingo)\s([0-2]\d)|([0-9])|([0-2][0-9])+$/;
+            if(texto.match(dia)) alert("El formato es correcto");
+            else alert("El formato es incorrecto");
+        }
+    </script>
+</body>
+</html>
