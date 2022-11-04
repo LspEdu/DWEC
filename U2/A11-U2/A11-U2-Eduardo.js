@@ -11,6 +11,5 @@ function salir(){
     confirm("¿Quieres salir?") ? document.getElementById("tabla").innerHTML="": borrar();  
 }
 function calcular(){
-    document.getElementById("resul").value = eval(document.getElementById("oper").value);
-    borrar();
+    document.getElementById("oper").value = eval(document.getElementById("oper").value);
 }

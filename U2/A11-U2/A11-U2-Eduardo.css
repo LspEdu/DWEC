@@ -1,4 +1,5 @@
 body{
+    background-color: rgb(0, 0, 0);
     align-self: center;
 }
 div{
@@ -7,10 +8,10 @@ div{
    
 }
 #tabla{
-    border: 20px;
-    border-style: groove;
+    border: 3px solid rgb(19, 19, 19);
+    border-radius: 20px;
     text-align: center;
-    background-color: #fffff0;
+    
 }
 tr{
     border: 10px;
@@ -23,4 +24,41 @@ button{
 #cal{
     width: 80px;
     display: inline;
+}
+button:not(.cal){
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    border:none;
+}
+.number{
+    background-color: rgb(44, 44, 44);
+    color: white;
+    font-size: medium;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.cal{
+    color: white;
+    font-size: 100px;
+    border:none;
+    background-color: rgb(213, 103, 24);
+    display: contents;
+    height:300px;
+    border-radius: 20px;
+    text-align: center;
+    
+}
+.oper {
+    color: white;
+    background-color: rgb(213, 103, 24);
+}
+.caltext{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    height: 20px;
+    border:none;
+    background-color: rgb(0, 0, 0);
+    padding: 10px;
+    color:white;
+    text-align: right;
+
 }
