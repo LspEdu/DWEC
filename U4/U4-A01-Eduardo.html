@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LA RENTA</title>
+    <script src="./U4-A01-Eduardo.js"></script>
+    <style>
+        .cont{
+            
+           
+            display: inline-flex ;
+            position: relative;
+        }
+        .cont .form{
+            position: relative;
+            padding: 10px;
+            width: 100%;
+        }
+        .cont .mostrar{
+            display: none;
+            position: relative;
+            width: 60%;
+        }
+        .cont .mostrar #h1{
+            font-size: 10px;
+            height: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <center>
+        <fieldset class="cont">
+            <legend>Los Dineros</legend>
+            <fieldset class="form">
+                <label for="num">Introduce el precio sin IVA:</label>
+                <input type="number" name="num" id="num">
+                <br><br>
+                <label for="IVA">Selecciona el tipo de IVA</label>
+                <input type="radio" name="IVA" id="iva21" value="21">21%
+                <input type="radio" name="IVA" id="iva10" value="10">10%
+                <input type="radio" name="IVA" id="iva5" value="5">5%
+                <br><br>
+                <button type="submit" onclick="crear_precio()">Enviar</button>
+            </fieldset>
+            <fieldset class="mostrar">
+                <div id="h1">   </div>
+            </fieldset>
+        </fieldset>
+    </center>
+</body>
+
+</html>
