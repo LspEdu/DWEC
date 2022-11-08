@@ -20,14 +20,17 @@
             width: 100%;
         }
         .cont .mostrar{
-            display: none;
+            display:none;
             position: relative;
             width: 60%;
         }
         .cont .mostrar #h1{
-            font-size: 10px;
+            font-size: 90px;
             height: 100px;
         }
+       input[type=number]{
+            text-align: right;
+       }
     </style>
 </head>
 
@@ -39,14 +42,14 @@
                 <label for="num">Introduce el precio sin IVA:</label>
                 <input type="number" name="num" id="num">
                 <br><br>
-                <label for="IVA">Selecciona el tipo de IVA</label>
+                <label for="IVA">Selecciona el tipo de IVA</label><br>
                 <input type="radio" name="IVA" id="iva21" value="21">21%
                 <input type="radio" name="IVA" id="iva10" value="10">10%
                 <input type="radio" name="IVA" id="iva5" value="5">5%
                 <br><br>
                 <button type="submit" onclick="crear_precio()">Enviar</button>
             </fieldset>
-            <fieldset class="mostrar">
+            <fieldset class="mostrar" id="divi">
                 <div id="h1">   </div>
             </fieldset>
         </fieldset>
