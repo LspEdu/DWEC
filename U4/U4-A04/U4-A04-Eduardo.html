@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú</title>
+    <script defer src="./U4-A04-Eduardo.js"></script>
+    <style>
+        .cont{
+            /* border:1px solid black; */
+            position:absolute;  
+            top:20px;
+            display: flex;
+            text-align: center;
+        }
+        .cont .blank{
+            display:block;
+            width: 650px;
+        }
+        .cont .formmm {
+            background-color: rgba(167, 167, 167, 0.383);
+            border-radius: 20px;
+            width: 60%;
+            height: fit-content+100px;
+        }
+        .cont .formmm div:not(div:last-child){
+            border-bottom: 1.5px groove rgba(92, 91, 91, 0.383);
+        }
+        .cont .formmm div{
+            padding: 4px;
+        }
+        .cont .formmm .sum{
+            display: block;
+            align-items: center;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="cont">
+        <div class="blank"></div>
+        <div class="formmm">
+            <div class="arr">
+                <label for="vec">Array: </label>
+                <input type="text" name="text" id="arr" disabled>
+            </div>
+            <div class="sum">
+                <label for="sum">Sumatorio: </label>
+                <input type="text" name="text" id="sum" disabled>
+            </div>
+            <div class="inv">
+                <label for="inv">Inverso: </label>
+                <input type="text" name="text" id="inv" disabled>
+            </div>
+            <div class="">
+                <label for="sum">Sumatorio</label>
+                <input type="text" name="text" id="sum" disabled>
+            </div>
+        </div>
+        
+    </div>
+</body>
+</html>

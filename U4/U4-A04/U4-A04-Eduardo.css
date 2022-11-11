@@ -1,0 +1,48 @@
+.contenedor{
+
+    border-radius: 50%;
+    width: 500px;
+    height: 500px;
+
+    margin:auto;
+    
+}
+.contenedor ul{
+    display: flex;
+    list-style:none;
+}
+.contenedor ul li{
+    line-height: 95px;
+    display: inline;
+    background-color: rgb(210,151,241);
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    justify-content: center;
+    transition: all ;
+}
+.contenedor ul li:hover{
+    background: rgb(210,151,241);
+    background: linear-gradient(149deg, rgba(210,151,241,1) 44%, rgba(96,40,94,1) 93%);
+    
+}
+.left-up{
+    
+    background-color: red;
+}   
+.right-up{
+    background-color: blue;
+}
+.bottom{
+    width: 50%;
+    background-color: green;
+}
+.button{
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    background-color: rgb(204, 80, 223);
+    border-color:rgb(158, 61, 173)
+
+}
