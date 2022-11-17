@@ -1,5 +1,6 @@
 body{
     margin:4;
+    display:block;
 }
 .fieldset1{
 
@@ -16,6 +17,7 @@ body{
     background-color: white;
     width: fit-content;
 }
+
 .box{
     height: 30px;
     border:none;
