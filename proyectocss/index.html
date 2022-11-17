@@ -6,11 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <script src="scripts.js"></script>
 </head>
 <body>
     <body>
         <form action="" method="get">
             <div class="fieldset1">
+
+    <body class="cont">
+            <div class="fieldset1" id="field">
+ main
                 <div class="legend">
                     Formulario
                 </div>
@@ -29,9 +34,38 @@
                         <input type="email" name="" id="email" class="box"><br><br>
                 </div>
                 <button class="" type="submit">Enviar</button>
-
+                <div class="buttons">
+                    <br>
+                    <div class="row">
+                        <div class="cell"></div>
+                        <div class="cell">
+                            <button type="submit" class="submit">Enviar</button>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="cell">
+                            <button class="red" onclick='cambio("red")'>Rojo</button>
+                        </div>
+                        <div class="cell">
+                            <button class="blue" onclick="cambio('blue')">Azul</button>
+                        </div>
+                        <div class="cell">
+                            <button class="black" onclick="cambio('black')">Negro</button>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="cell">
+                            <button class="pink" onclick="cambio('pink')">Rosa</button>
+                        </div>
+                        <div class="cell">
+                            <button class="green" onclick="cambio('green')">Verde</button>
+                        </div>
+                        <div class="cell">
+                            <button class="white" onclick="cambio('white')">Blanco</button>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </form>
     </div>
 </body>
 </html>
