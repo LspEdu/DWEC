@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./U4-A06-Eduardo.js"></script>
+</head>
+
+<body>
+    <div>
+        <div style="border:1px solid black;width:fit-content;display:inline-block">
+            Introduce los datos
+            <br><br>
+            <div id="num"></div>
+            <label for="name">Nombre</label>&nbsp;
+            <input type="text" name="name" id="name" style="width:176px" value="Pepe">
+            <br>
+            <label for="not1">Nota1</label>&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="number" style="text-align: right;" value="0" name="not1" id="not1">
+            <br>
+            <label for="not2">Nota2</label>&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="number" style="text-align: right;" value="0" name="not2" id="not2">
+            <br>
+            <label for="not3">Nota3</label>&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="number" style="text-align: right;" value="0" name="not3" id="not3">
+            <br><br>
+            <button onclick="add()" style="width:245px">Añadir</button>
+        </div>
+        <table style="display:none" border="5" id="tabla">
+
+        </table>
+    </div>
+</body>
+
+</html>

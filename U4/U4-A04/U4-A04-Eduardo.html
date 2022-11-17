@@ -54,9 +54,20 @@
                 <input type="text" name="text" id="inv" disabled>
             </div>
             <div class="">
-                <label for="sum">Sumatorio</label>
-                <input type="text" name="text" id="sum" disabled>
+                <label for="sum">Ascendente</label>
+                <input type="text" name="text" id="asc" disabled>
             </div>
+            <div class="">
+                <label for="sum">Descendente</label>
+                <input type="text" name="text" id="desc" disabled>
+            </div>
+            <div>
+                <label for="esc">Escribe el número a buscar</label><br> 
+                <input type="number" style="text-align: right;" value="0" name="text" id="find">
+                <button onclick="buscar(document.getElementById('find').value)">Buscar</button>
+            </div>
+            
+            
         </div>
         
     </div>
