@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays</title>
+</head>
+
+<body>
+    <script>
+        function getRandomInt() {
+            return Math.floor(Math.random() * 10);
+        }
+        function menorOcho(x){
+            let array = [];
+            x.forEach(j => {
+                if(j<8)array.push(j);
+            });
+            return array;
+        }
+        function replaceImpar(x){
+            for(var i=0;i<x.length;i++)if(x[i]%2 !=0)x[i]="impar";
+            return x;
+        }
+        let arr = [];
+        for (var i = 0; i < 10; i++) {
+            arr.push(getRandomInt());
+        }
+        alert(`El array generado es ${arr}`);
+        alert(`El siguiente es ${menorOcho(arr)}`);
+        alert(`El último array es ${replaceImpar(menorOcho(arr))}`);
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function comprobar_positivos(x){
+            let arr_bool = [];
+            x.forEach(j => {
+                if(Math.floor(j)>0)arr_bool.push(true);
+                else arr_bool.push(false);
+            });
+            return arr_bool;
+        }
+        function tripliciar(x){
+            for(var i=0;i<x.length;i++){
+                x[i]=x[i]*3;
+            }
+            return x;
+        }
+        function expo(x){
+            let z = 1;
+            x.forEach(j => {
+                z*=j;
+            });
+            return z;
+        }
+        let arr = [];
+        for(var i=0; i<5;i++)arr.push(Math.random());
+        alert(`El array es \n${arr}`);
+        alert(`Esto es un array con las posiciones que son positivos \nen cada posición: \n${comprobar_positivos(arr)}`);
+        alert(`Esto es el triple de cada valor : \n${tripliciar(arr)}`);
+        alert(`Esto es la multiplicación de todos sus valores \n${expo(arr)}`)
+    </script>
+</body>
+</html>
