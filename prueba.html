@@ -1,7 +1,29 @@
-<html>
+<!DOCTYPE html>
+<html lang="es">
 <head>
-<title>Ejemplos de control de marcos</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
 </head>
-<iframe src="Marco1.html" sandbox></iframe>
-<iframe src="Marco2.html" sandbox></iframe>
+<body>
+    <form>
+        <input type="checkbox" name="gen" id="1" value="E">E
+        <input type="checkbox" name="gen" id="2" value="a">A
+        <input type="checkbox" name="gen" id="3" value="4">4
+        <input type="checkbox" name="gen" id="4" value="5">5
+        <input type="checkbox" name="gen" id="5" value="6">6
+        <input type="button"   value="Mostrar" id="btn">
+    </form>
+    <script>
+        document.getElementById("btn").addEventListener('click', funcion1);
+        function funcion1(){
+            var elements = document.querySelectorAll("input[name='gen']:checked");
+            alert("Has seleccionado " + elements.length + " elementos")
+            for(var i of elements){
+                alert("Has Seleccionado "+i.value);
+            }
+        }
+    </script>
+</body>
 </html>

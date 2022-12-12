@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <style>
+        input,select{
+            border-radius: 10px;
+            border: 3px groove;
+        }
+        #name{
+            background-color: rgb(240, 145, 145);
+            border-color: rgb(182, 107, 107);
+        }
+        #ape{
+            background-color: aquamarine;
+        }
+        #web{
+            background-color: rgb(100,100,255);
+        }
+        #web::placeholder{
+            color:white;
+            padding-left: 3px;
+        }
+        #mail{
+            background-color: rgb(230,230,230);
+        }
+        #color{
+            background-color: lightblue;
+            border-radius: 10px;
+        }
+        #bot{
+            width: 40px;
+        }
+        fieldset{
+            border: 2px thin rgb(0,54,20);
+             background-color: rgb(200,200,200); 
+             margin:auto; width: 40%;
+              border-radius: 20px
+        }
+        legend{
+            border-radius:10px; 
+            background-color: white;
+        }
+        button{
+            border-color:rgb(200,23,23);
+
+        }
+    </style>
+</head>
+<body style="margin:auto;">
+    <form method="get" action="#">
+        <fieldset>
+            <legend>Datos Personales</legend><br>
+            <label for="name">Nombre:</label>
+            <input type="text" name="name" id="name" maxlength="20"  required><br><br>
+            <label for="ape">Apellidos:</label>
+            <input type="text" name="ape" id="ape" required><br><br>
+            <label for="web">Página web</label>
+            <input type="url" name="web" id="web" placeholder="example@example.com"><br><br>
+            <label for="mail">Correo</label>
+            <input type="email" name="mail" id="mail" placeholder="https://www.example.com"><br><br>
+            <label for="color">Color Favorito</label>
+            <input type="color" name="colores" id="colores"><br><br>
+            <textarea name="color" id="color" cols="30" rows="10" placeholder="Utilice este cuado para escribir sobre su formación académica"></textarea>
+        </fieldset>
+        <fieldset >
+            <legend>Indique sus géneros</legend>
+            <select multiple="4">
+                <option value="Hombre">Hombre</option>
+                <option value="Mujer">Mujer</option>
+                <option value="Otros">Otros</option>
+            </select><br>
+            <input type="checkbox" name="mujer" id="mujer">Mujer <br>
+            <input type="checkbox" name="hombre" id="hombre">Hombre <br>
+            <input type="checkbox" name="nc" id="nc">Prefiero no contestar <br>
+        </fieldset>
+        <fieldset>
+            <legend>Login</legend>
+            <label for="user">Nombre de Usuario</label>
+            <input type="text" name="user" id="user" placeholder="Nombre de Usuario">
+            <br>
+            <label for="pwd">Contraseña</label>
+            <input type="password" name="pwd" id="pwd" placeholder="Contraseña">
+        </fieldset>
+        <fieldset>
+            <legend>Consentimiento</legend>
+            <input type="checkbox" name="1" id="1" checked>Deseo recibir información sobre novedades y ofertas <br>
+            <input type="checkbox" name="2" id="2">Declaro haber leído y aceptar las condiciones generales del programa y la normativa sobre protección de datos
+        </fieldset>
+        <fieldset>
+            <legend>Indique sus preferencias por favor</legend>
+            <label for="js">Javascript</label>
+            <input type="radio" name="leng" id="js"> 
+            <label for="html">HTML</label>
+            <input type="radio" name="leng" id="html">
+            <label for="python">Python</label>
+            <input type="radio" name="leng" id="python">
+        </fieldset>
+        <fieldset>
+            <legend>Reserva Hotel</legend>
+            <label for="ent">Fecha de Llegada:</label>
+            <input type="date" name="ent" id="ent"><br>
+            <label for="he">Hora de Entrada</label>
+            <input type="time" name="he" id="he"><br>
+            <label for="sal">Fecha de Salida:</label>
+            <input type="date" name="sal" id="sal"><br>
+            <label for="hs">Hora de Salida</label>
+            <input type="time" name="hs" id="hs"><br>
+        </fieldset>
+        <fieldset>
+            <legend>Compra</legend>
+            <label for="bot">Número de botellas</label>
+            <input type="number" name="bot" id="bot" value="0"><br>
+            <label for="pak">Número de botellas en paquete</label>
+            <input type="number" name="pak" id="pak" step="3" value="0"><br>
+            <label for="ct">Carne:</label>
+            <select name="ct" id="ct">
+                <option value="" hidden>Elija</option>
+                <option value="">Roja</option>
+                <option value="">Blanca</option>
+            </select> <br>
+            <label for="cant">Cantidad:</label>
+            <input type="text" name="cant" id="cant" pattern="[0-9]+(kg|gr)" placeholder="10kg ó 10gr" tittle="gr o KG"><br>
+            <label for="meat">Carne:</label>
+            <select name="meat" id="meat">
+                <optgroup label="Carne Roja">
+                    <option value="" hidden>Elija</option>
+                    <option value="">Ternera</option>
+                    <option value="">Cerdo</option>
+                    <option value="">Buey</option>
+                </optgroup>
+                <optgroup label="Carne Blanca">
+                    <option value="">Pollo</option>
+                    <option value="">Pavo</option>
+                    <option value="" disabled>Conejo</option>
+                </optgroup>
+            </select>
+            
+        </fieldset>
+        <center>
+            <br>
+            <button type="submit" value="Enviar" style=" border-radius: 20px; width:90px; height:35px;">Enviar</button>
+            <input type="reset" value="Borrar" style=" border-radius: 20px; width: 90px; height:35px";>
+        </center>
+    </form method="get">
+
+</body>
+</html>
