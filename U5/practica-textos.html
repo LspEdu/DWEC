@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Textos</title>
+    <style>
+        .col{
+            color:red;
+        }
+    </style>
+</head>
+<body>
+    <h2 id="h1">ESPAÑA</h1>
+    <h2 class="h2">ESPAÑA</h2>
+    <h2>ESPAÑA</h2>
+
+
+    <br><br>
+    <button onclick="text()">Cambiar texto</button>
+    <button onclick="color()">Cambiar Color</button>
+    <button onclick="quitarcolor()">Quitar Color</button>
+    <button onclick="setInterval(ambu,300)">AMBULANCIA</button>
+    <script>
+        function text(){
+            document.getElementById('h1').innerText="TEXTO CAMBIADO";
+        }
+        function color(){
+           document.getElementsByTagName("h2")[0].style.color="red";
+        }
+        function quitarcolor(){
+            document.getElementsByTagName("h2")[0].style.color="black";
+        }
+        function ambu(){
+            let j = document.getElementsByTagName("h2");
+            let i = Math.floor(Math.random()*2);
+                if(i==1){
+                    j[0].style.color="yellow";
+                    j[1].style.color="red";
+                    j[2].style.color="yellow";
+                    console.log(1);
+                }else{
+                    j[0].style.color="red";
+                    j[1].style.color="yellow";
+                    j[2].style.color="red";
+                    console.log(2);
+                }
+        }
+    </script>
+</body>
+</html>

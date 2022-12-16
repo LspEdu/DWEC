@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RadioButton</title>
+</head>
+
+<body>
+    <fieldset>
+        <legend>Seleccione su asignatura</legend>
+        <input type="radio" name="ASIG" id="DIW">
+        <label for="DIW"> Diseño interfaces web</label><br>
+        <input type="radio" name="ASIG" id="DWEC">
+        <label for="DWEC">Desarrollo web en entorno cliente</label><br>
+        <input type="radio" name="ASIG" id="DWESE">
+        <label for="DWESE">Desarrollo web en entorno servidor</label><br>
+        <input type="radio" name="ASIG" id="PFE">
+        <label for="PFE">Prácticas formativas en empresas</label><br>
+        <input type="radio" name="ASIG" id="Proyecto">
+        <label for="Proyecto">Proyecto de Desarrollo de aplicaciones Web </label><br>
+    </fieldset>
+    <button id="s">Submit</button>
+    <h2>Has seleccionado: <span id="span"></span></h2>
+
+    <script>
+        let form = document.getElementById('s').addEventListener('click', function2);
+        function function2() {
+            let x = document.querySelector("input[name='ASIG']:checked");
+            for (const label of x.labels) {
+                document.getElementById("span").innerText = label.textContent;
+            }
+        }
+
+    </script>
+</body>
+
+</html>
