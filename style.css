@@ -1,0 +1,42 @@
+div{
+    display: flex;
+    border: 2px solid lightgrey;
+    padding: 10px;
+    width: fit-content;
+    justify-content: center;
+    margin: auto;
+    border-radius: 15px;
+}e3
+div:not(.container, .buttons){
+    display:block;
+    border-radius: 10px;
+    background-color: lightslategray;
+    border:0px;
+    padding: 0;
+    height: 40px;
+    margin:10px;
+}
+
+label{
+    padding: 3px;
+    color:aliceblue;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    height: 40px;
+    padding-left: 5px;
+    width:100px;
+    
+}
+label + input{
+    background-color: rgb(170, 205, 233);
+    height: 38px;
+    border-radius: 0px 10px 10px 0px;
+    border:none;
+    outline: none;
+    padding-left: 10px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
+
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button{
+    -webkit-appearance: none;
+}

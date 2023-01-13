@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <style>
+        th
+        {
+            width: 250px;
+            height: 250px;
+        }
+        table{
+            margin:auto;
+        }
+    </style>
+</head>
+<body>
+    <button onclick="location.reload()">Recargar</button>
+    <table border="1" style=" position: absolute; font-size: 100px;">
+        <tr>
+            <th id="1">
+                
+            </th>
+            <th id="2">
+
+            </th>
+            <th id="3">
+
+            </th>
+        </tr>
+        <tr>
+            <th id="4">
+
+            </th>
+            <th id="5">
+
+            </th>
+            <th id="6">
+                
+            </th>
+        </tr>
+        <tr>
+            <th id="7">
+
+            </th>
+            <th id="8">
+
+            </th>
+            <th id="9">
+                
+            </th>
+        </tr>
+    </table>
+    <script>
+        let th = document.querySelectorAll('th');
+        var Z = false;
+        var tabla = [1,2,3,4,5,6,7,8,9];
+
+        th.forEach((x)=> {
+            x.addEventListener("click", () => {
+                cambiar(x,tabla)
+            })
+        })
+        
+        function cambiar(th,tabla){
+           if(Z == true){
+            th.innerHTML="O";
+            Z = false;-
+            añadir(th.id,"O",tabla);
+           }
+           else{
+            th.innerHTML="X";
+            Z = true;
+            añadir(th.id,"X",tabla);
+           }
+        }
+
+        function añadir(id,signo,tabla){
+            tabla[parseInt(id)] = signo;
+            comprobarVictoria(tabla,signo);
+        }
+
+        function comprobarVictoria(tabla,signo) {
+             if((tabla[1] == tabla[2] && tabla[2] == tabla[3]) || 
+                (tabla[1] == tabla[7] && tabla[7] == tabla[4]) || 
+                (tabla[1] == tabla[5] && tabla[5] == tabla[9]) ||
+                (tabla[2] == tabla[5] && tabla[5] == tabla[8]) ||
+                (tabla[3] == tabla[6] && tabla[6] == tabla[9]) ||
+                (tabla[3] == tabla[5] && tabla[5] == tabla[7]) ||
+                (tabla[4] == tabla[5] && tabla[5] == tabla[6]) ||
+                (tabla[7] == tabla[8] && tabla[8] == tabla[9])){  
+                alert("Has Ganado " + signo);
+            }
+            ;
+        }
+    </script>
+</body>
+</html>

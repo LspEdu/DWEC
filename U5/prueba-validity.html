@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>Validty</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS v5.2.1 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+</head>
+
+<body>
+  <header>
+    <!-- place navbar here -->
+  </header>
+  <main class="vh100">
+    <div class="container ">
+        <form action="">
+            <div class="row input-group mb-3">
+                <span class="input-group-text" id="basic-addon1">Nombre</span>
+                <input type="text" class="form-control" placeholder="Nombre" aria-label="Nombe" aria-describedby="basic-addon1" pattern="[A-Za-z]{2,15}" title="Introduce entre 2 y 15 letras">
+            </div>
+            <div class=" row input-group mb-3">
+                <span class="input-group-text" id="basic-addon1">Edad</span>
+                <input type="number" class="form-control" placeholder="18" aria-label="Edad" aria-describedby="basic-addon1" min="18" >
+            </div>
+            <div class="row input-group mb-3">
+                <span class="input-group-text" id="basic-addon1">Teléfono</span>
+                <input type="text" class="form-control" placeholder="9 dígitos" aria-label="Username" aria-describedby="basic-addon1" pattern="[0-9]{9}" title="Introduzca un número correcto">
+            </div>
+            <div class="row justify-content-center align-items-center g-2">
+                <div class="col"><button type="submit" class="btn btn-primary">Enviar</button></div>
+                <div class="col"><button type="reset" class="btn btn-primary">Borrar</button></div>
+            </div>
+        </form>
+    </div>
+  </main>
+  <footer>
+    <!-- place footer here -->
+  </footer>
+  <!-- Bootstrap JavaScript Libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+    integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+  </script>
+</body>
+
+</html>
