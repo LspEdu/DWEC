@@ -3,22 +3,22 @@ var ejeX = 0,
     
 document.addEventListener('keydown', (event) => {
     var box = document.getElementById("box");
-    alert(window.innerHeight)
+   
     switch (event.code){
         case "ArrowDown":
-            if(ejeY >= (window.innerHeight-140)){
-            break;
-            }
+            if(ejeY >= (window.innerHeight-140))break;
             box.style.top = (ejeY += 40)+ "px" ; 
             break;
         case "ArrowUp":
-            if(box.style.top == "0px")break;
+            if(ejeY <= 0)break;
             box.style.top = (ejeY -= 40) +"px";
             break;
         case "ArrowLeft":
+            if(ejeX <= 0) break;
             box.style.left = (ejeX -= 40) + "px";
             break;
         case "ArrowRight":
+            if(ejeX >= (window.innerWidth-140))break;
             box.style.left = (ejeX += 40) + "px";
             break;
 
