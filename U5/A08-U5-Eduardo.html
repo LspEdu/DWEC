@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividad 8</title>
+    <style>
+        fieldset {
+            width: fit-content ;
+        }
+        button a {
+            outline: none;
+            text-decoration: none;
+            color:black
+        }
+    </style>
+</head>
+<body>
+    <form action="#">
+        <fieldset>
+            <legend>Datos Personales</legend>
+            <label for="name">Introduce tu nombre: </label>
+            <input type="text" name="name" id="name" ><br>
+            <label for="msj">Mensaje</label><br>
+            <textarea name="msj" id="msj" cols="50" rows="5"></textarea>
+        </fieldset>
+        <label for="color">Elige un color</label><br>
+        <input type="radio" name="color" id="red">
+        <label for="red">Rojo</label><br>
+        <input type="radio" name="color" id="green">
+        <label for="green">Verde</label><br>
+        <input type="radio" name="color" id="blue">
+        <label for="blue">Azul</label><br><br>
+
+        <label for="asig">Selecciona una asignatura:</label>
+        <select name="asig" id="asig">
+            <option value="0" disabled selected hidden>Asignatura</option>
+            <option value="1">Matematicas</option>
+            <option value="2">Despliegue</option>
+            <option value="3">Servidor</option>
+            <option value="4">Cliente</option>
+            <option value="5">Diseño</option>
+        </select>
+       
+        <p>Seleccione los días con disponibilad: </p>
+        <input type="checkbox" name="monday" id="l">
+        <label for="monday">Lunes</label><br>
+        <input type="checkbox" name="tuesday" id="2">
+        <label for="tuesday">Martes</label><br>
+        <input type="checkbox" name="wednesday" id="3">
+        <label for="wednesday">Miércoles</label><br>
+        <input type="checkbox" name="thursday" id="4">
+        <label for="thursday">Jueves</label><br>
+        <input type="checkbox" name="friday" id="5">
+        <label for="friday">Viernes</label><br>
+        <input type="checkbox" name="saturday" id="6">
+        <label for="saturday">Sábado</label><br>
+        <input type="checkbox" name="sunday" id="7">
+        <label for="sunday">Domingo</label><br><br>
+
+        <button type="submit">Haz click para enviar información</button>
+        <button type="reset">Comenzar a rellenar de nuevo</button>
+        <button>
+            <a href="https://www.google.es">Haz click sobre mi</a>
+        </button>
+
+    </form>
+
+
+</body>
+</html>
