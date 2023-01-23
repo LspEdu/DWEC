@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tetris</title>
+  <style>
+    .tabla{
+      position: relative;
+      min-width: 100px;
+      
+      max-height: 100px;
+    }
+  </style>
+</head>
+<body>
+  <table id="tabla" border="1">
+    
+  </table>
+  
+  <script>
+
+function tableCreate() {
+  const body = document.body,
+        tbl = document.createElement('table');
+  tbl.style.width = '20%';
+  tbl.style.height = '40em';
+  tbl.style.margin = 'auto';
+
+  for (let i = 0; i < 20; i++) {
+    const tr = tbl.insertRow();
+    for (let j = 0; j < 10; j++) {
+        const td = tr.insertCell();
+       /*  td.appendChild(document.createTextNode(`Cell I${i}/J${j}`)); */
+        td.style.border = '1mm solid black';
+        td.style.width = '20em';
+        
+      
+    }
+  }
+  body.appendChild(tbl);
+}
+
+tableCreate();
+
+  </script>
+</body>
+</html>
