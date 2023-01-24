@@ -6,8 +6,92 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Actividad 16</title>
     <script src="A16-U5-Eduardo.js"></script>
+    <style>
+        main{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            border: 2px solid teal;
+            margin: auto;
+            width: fit-content;
+        }
+        p:nth-child(1){
+            justify-self: center;
+            grid-column: 1/4;
+        }
+        .cont{
+            grid-column: 1/1;
+       }
+       .sep{
+           grid-column: 1/4;
+        }
+       button{
+           grid-column: 1/3;
+           left: 1em;
+           border-radius: 5px;
+           border-style: none;
+           background-color: teal;
+           color: white;
+           height: 2em;
+           width: 10em;
+           justify-self: center;
+        }
+       .barras{
+           grid-column: 1/5;
+           display: grid;
+           grid-template-columns: 100%;
+        }
+        .barras div{
+            grid-column: 1/5;
+        }
+        progress{
+        transition: 1s;
+        height: 25px;
+
+       }
+    </style>
 </head>
 <body>
-    
+        <main>
+            <p>¿Qué sistema operativo móvil te gusta más?</p>
+            <div class="space"></div>
+            <div class="cont">
+                <input type="radio" name="phone" id="ios" value="1">
+                <label for="ios">iOS</label>
+            </div>
+            <div class="cont">
+                <input type="radio" name="phone" id="and" value="2">
+                <label for="and">Android</label>
+            </div>
+            <div class="cont">
+                <input type="radio" name="phone" id="win" value="1">
+                <label for="win">Windows Phone</label>
+            </div>
+            <div class="cont">
+                <input type="radio" name="phone" id="oth" value="1">
+                <label for="oth">Otro</label>
+            </div>
+            <div class="sep"></div>
+            <div class="sep"><br></div>
+            <button id="votar">Votar!</button>
+            <div class="sep"><br></div>
+            <div class="barras">
+                <div class="sep"><br></div>
+                <div>
+                    <progress id="b_ios" max="100" value="0"></progress>&nbsp; iOS <span id="p_ios">0.00</span>% <br>
+                </div>
+                <div>
+                    <progress id="b_and" max="100" value="0"></progress>&nbsp; Android <span id="p_and">0.00</span>%<br>
+                </div>
+                <div>
+                    <progress id="b_win" max="100" value="0"></progress>&nbsp; Windows Phone <span id="p_win">0.00</span>%<br>
+                </div>
+                <div>
+                    <progress id="b_oth" max="100" value="0"></progress>&nbsp; Otros <span id="p_oth">0.00</span>%<br>
+                </div>
+                <br>
+
+            </div>
+        </main>
+    <script src="A16-U5-Eduardo.js" defer></script>
 </body>
 </html>

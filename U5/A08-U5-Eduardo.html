@@ -68,35 +68,6 @@
 
     </form>
 
-    <script>
-        var form = document.getElementById('form');
-        form.addEventListener('submit', () => {
-            switch (parseInt(form['asig'].value)) {
-                case 0:
-                    alert("Seleccione una asignatura");
-                    break;
-                case 1:
-                    alert("Se le enviará a Jesús");
-                    break;
-                    case 2:
-                    alert("Se le enviará a Miguel Ángel");
-                    break;
-                case 3:
-                    alert("Se le enviará a Ricardo");
-                    break;
-                case 4:
-                    alert("Se le enviará a Rafael");
-                    break;
-                case 5:
-                    alert("Se le enviará a Andrés");
-                    break;
-                };
-                let checkbox = document.querySelectorAll('checkbox[checked]');
-                checkbox.forEach((x)=>{
-                    alert(x);
-                });
-        })
-    </script>
 
 </body>
 </html>
