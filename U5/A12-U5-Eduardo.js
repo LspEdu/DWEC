@@ -1,9 +1,11 @@
 document.querySelectorAll('input[type="text"]').forEach(input => {
-    input.addEventListener('blur',comprobar);
+    input.addEventListener('change' ,comprobar);
     input.addEventListener('focus',() => {
         input.style.backgroundColor = "white";
     })
 });
+
+document.forms[0].addEventListener('submit', passwords);
 
 document.getElementById('ver').addEventListener('click', enseñarCookies);
 
@@ -29,8 +31,6 @@ function comprobar(event) {
             expr = /^(http|https):\/\/www\.\w{4,}\.\w{2,3}$/;
             break;
         case "contraseña":
-            expr = /\d{8,10}/;
-            break;
         case "confirmarcontraseña":
             expr = /\d{8,10}/;
             break;
@@ -54,3 +54,8 @@ function enseñarCookies() {
    alert(document.cookie)
 }
 
+function passwords() {
+    let pwd = document.getElementById('contraseña'),
+        cpwd = document.getElementById('confirmarcontraseña');
+    if(pwd != cpwd) return alert("Las contraseñas no coinciden");
+}

@@ -1,13 +1,20 @@
 
 document.forms[0].addEventListener('submit',(x) => {
-   select();
-   dia();
+    select();
+    ultimo()
 });
+
+document.querySelectorAll('.dias').forEach(chk => {
+    chk.addEventListener('change', () => {
+        last = chk.name;
+    });
+})
 
 document.forms[0].elements.color.forEach(col => {
     col.addEventListener('change' , color);
 });
 
+let last;
 function color() {
     let radios = document.querySelector('input[type="radio"][name="color"]:checked');
     document.body.style.backgroundColor = radios.id;
@@ -37,10 +44,9 @@ function select() {
 
     }
 }
-
-
-function dia() {
-    let dias = document.querySelectorAll('.dias:checked'),
-        last = dias[dias.length-1].name;
-    alert("Se le asignará este día = " + last);
+function ultimo(){
+    if(!last){
+        return alert("Seleccione un día");
+    }
+    return alert("Su día preferente es = " + last);
 }
