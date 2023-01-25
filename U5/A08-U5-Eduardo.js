@@ -1,12 +1,13 @@
 
 document.forms[0].addEventListener('submit',(x) => {
     select();
-    ultimo()
+    ultimo();
 });
 
 document.querySelectorAll('.dias').forEach(chk => {
     chk.addEventListener('change', () => {
         last = chk.name;
+        anadir(chk);
     });
 })
 
@@ -49,4 +50,18 @@ function ultimo(){
         return alert("Seleccione un día");
     }
     return alert("Su día preferente es = " + last);
+}
+
+function anadir(chk) {
+    let select = document.getElementById("pref"),
+        opt = document.createElement('option');
+    
+    opt.value = chk.id;
+    opt.innerHTML = chk.name;
+
+    select.appendChild(opt); 
+    
+    select.value = opt.value;
+
+
 }
