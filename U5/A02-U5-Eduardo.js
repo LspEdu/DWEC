@@ -1,5 +1,5 @@
 var ejeX = 0,
-    ejeY = 0;
+    ejeY = 550;
     
 document.addEventListener('keydown', (event) => {
     var box = document.getElementById("box");
