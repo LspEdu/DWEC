@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividad 7</title>
+    <style>
+        
+    </style>
+</head>
+<body>
+
+    <script>
+        let ul  = document.createElement('ul'),
+            ul2 = document.createElement('ul'),
+            ul3 = document.createElement('ul'),
+            all  = document.getElementsByTagName('*'),
+            cont = 0;
+            
+            for(let element of all ){
+                let li = document.createElement('li'),
+                    text = document.createTextNode(element.nodeName);
+                if(cont == 0 || cont == 7){
+                    li.appendChild(text);
+                    ul.appendChild(li);
+
+                }
+                if(cont > 0 && cont < 7){
+                    li.appendChild(text);
+                    ul2.appendChild(li);
+                    ul.appendChild(ul2);
+                }
+                if(cont > 7){
+                    li.appendChild(text);
+                    ul3.appendChild(li);
+                    ul.appendChild(ul3);
+                }
+                cont++;
+            }
+            document.body.appendChild(ul);
+
+    </script>
+</body>
+</html>

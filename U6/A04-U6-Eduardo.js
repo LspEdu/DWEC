@@ -13,6 +13,7 @@ function addAlumn() {
                 return alert("El campo "+ input.name + " no puede estar vacío")
             }
             alumno.push(input.value);
+            input.value = "";
         }
         ALUMNOS.push(alumno);
     };
